@@ -1,2 +1,9 @@
 # Generamba-Template-Catalog
-A shared catalog for Generamba Templates
+
+### Overview
+
+It's a shared catalog of templates for [Generamba](https://github.com/rambler-digital-solutions/Generamba) code generator.
+
+**Generamba** is a code generator made for working with Xcode.
+
+The detailed information about a template structure is available in [Generamba Wiki](https://github.com/rambler-digital-solutions/Generamba/wiki/Template-Structure).

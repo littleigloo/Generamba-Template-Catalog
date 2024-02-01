@@ -1,0 +1,29 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import VIPERLib
+//                                      MARK: - DESTINATIONS
+//..............................................................................................
+final class {{ module_info.name }}Router: Router {
+    // ...........
+    enum Destination {
+        case none // ✔️ NONE
+    }
+}
+
+//                                      MARK: - PRESENTER -> ROUTER
+//..............................................................................................
+extension {{ module_info.name }}Router: {{ module_info.name }}PresenterToRouterInterface {
+    // ...........
+    func navigateTo( _ destination: {{ module_info.name }}Router.Destination) {
+        // Handle DESTINATION
+        switch destination {
+        case .none: break // ✔️ NONE
+        }
+    }
+}

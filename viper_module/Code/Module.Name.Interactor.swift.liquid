@@ -1,0 +1,42 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import VIPERLib
+// ...........
+final class {{ module_info.name }}Interactor: Interactor<{{ module_info.name }}Module> {
+    //  MARK: PROPERTIES
+    // ////////////////////////////////////
+    /// - Parameters:
+    ///
+    ///     - viewPresenter: ViewPresenter
+    ///
+
+    //  MARK: PROPERTIES 🔰 PRIVATE
+    // ////////////////////////////////////
+    fileprivate lazy var service = { {{ module_info.name }}Services(with: viewPresenter) }()
+}
+
+//                                      MARK: - SERVICES
+//..............................................................................................
+extension {{ module_info.name }}Interactor {
+    fileprivate class {{ module_info.name }}Services: Services {
+        // ...........
+        // lazy var myData = Service.GetMyData()
+        // ...........
+        //func fetchMyData(param: String, onComplete: @escaping (Response.MyData) -> ()) {
+        //    let request = Request.MyData(param: param)
+        //    service.myData.request(request, onComplete: onComplete)
+        //}
+    }
+}
+
+//                                      MARK: - PRESENTER -> INTERACTOR
+//..............................................................................................
+extension {{ module_info.name }}Interactor: {{ module_info.name }}PresenterToInteractorInterface {
+    // ✔️ NONE
+}

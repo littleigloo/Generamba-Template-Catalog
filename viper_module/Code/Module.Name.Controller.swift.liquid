@@ -1,0 +1,36 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+import VIPERLib
+// ...........
+final class {{ module_info.name }}Controller: Controller<{{ module_info.name }}Module> {
+    // ...........
+    enum Action {
+        case none // ✔️ NONE
+    }
+    //  MARK: PROPERTIES
+    // ////////////////////////////////////
+    /// - Parameters:
+    ///
+    ///     - presenter: [Controller -> Presentrer] Interface.
+    ///
+    
+}
+
+//                                      MARK: - PRESENTER -> CONTROLLER
+//..............................................................................................
+extension {{ module_info.name }}Controller: {{ module_info.name }}PresenterToControllerInterface {
+    // ...........
+    func display(_ data: {{ module_info.name }}Presenter.Display) {
+        // Handle DATA
+        switch data {
+            case .none: break // ✔️ NONE
+        }
+    }
+}

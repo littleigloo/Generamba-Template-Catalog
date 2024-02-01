@@ -1,0 +1,15 @@
+# Template information section
+name: viper_module
+summary: VIPER Architecture Module
+author: Vitalis Girsas
+version: 3.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+- {custom_name: Module.{{ module_info.name }}.swift,            name: Main/abc.swift,   path: Code/Module.Name.swift.liquid}
+- {custom_name: Module.{{ module_info.name }}.xib,              name: Main/abc.swift,   path: Code/Module.Name.xib.liquid}
+- {custom_name: Module.{{ module_info.name }}.Controller.swift, name: Main/abc.swift,   path: Code/Module.Name.Controller.swift.liquid}
+- {custom_name: Module.{{ module_info.name }}.Presenter.swift,  name: Main/abc.swift,   path: Code/Module.Name.Presenter.swift.liquid}
+- {custom_name: Module.{{ module_info.name }}.Interactor.swift, name: Main/abc.swift,   path: Code/Module.Name.Interactor.swift.liquid}
+- {custom_name: Module.{{ module_info.name }}.Router.swift,     name: Main/abc.swift,   path: Code/Module.Name.Router.swift.liquid}

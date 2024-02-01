@@ -1,0 +1,76 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import VIPERLib
+//                                      MARK: - MODEL
+//.............................................................................................
+struct {{ module_info.name }}Model {
+    // ✔️ NONE
+}
+
+//                                      MARK: - MODULE IN/OUT
+//.............................................................................................
+// IN
+protocol {{ module_info.name }}InputInterface {
+    // ✔️ NONE
+}
+// ...........
+// OUT
+protocol {{ module_info.name }}DelegateInterface {
+    // ✔️ NONE
+}
+
+//                                      MARK: - PRESENTER -> CONTROLLER
+//.............................................................................................
+protocol {{ module_info.name }}PresenterToControllerInterface: PresenterToControllerInterface {
+    func display(_ data: {{ module_info.name }}Presenter.Display)
+}
+
+//                                      MARK: - CONTROLLER -> PRESENTER
+//.............................................................................................
+protocol {{ module_info.name }}ControllerToPresenterInterface: ControllerToPresenterInterface {
+    func didAction(_ action: {{ module_info.name }}Controller.Action)
+}
+
+//                                      MARK: - PRESENTER -> INTERACTOR
+//.............................................................................................
+protocol {{ module_info.name }}PresenterToInteractorInterface: PresenterToInteractorInterface {
+    // ✔️ NONE
+}
+
+//                                      MARK: - PRESENTER -> ROUTER
+//.............................................................................................
+protocol {{ module_info.name }}PresenterToRouterInterface: PresenterToRouterInterface {
+    func navigateTo(_ destination: {{ module_info.name }}Router.Destination)
+}
+
+//                                      MARK: - MODULE
+//..............................................................................................
+final class {{ module_info.name }}Module: ModuleInterface {
+    // NIB
+    static var nibName: String { return "Module.{{ module_info.name }}" }
+    // MODEL
+    typealias Model = {{ module_info.name }}Model
+    // MAIN
+    typealias Controller = {{ module_info.name }}Controller
+    typealias Presenter = {{ module_info.name }}Presenter
+    typealias Interactor = {{ module_info.name }}Interactor
+    typealias Router = {{ module_info.name }}Router
+    // //////////   INTERFACES
+    // /////////////////////////////////////
+    // IN/OUT
+    typealias InputInterface  = {{ module_info.name }}InputInterface
+    typealias DelegateInterface = {{ module_info.name }}DelegateInterface
+    // CONTROLLER
+    typealias ControllerToPresenterInterface = {{ module_info.name }}ControllerToPresenterInterface
+    // PRESENTER
+    typealias PresenterToControllerInterface = {{ module_info.name }}PresenterToControllerInterface
+    typealias PresenterToInteractorInterface = {{ module_info.name }}PresenterToInteractorInterface
+    typealias PresenterToRouterInterface = {{ module_info.name }}PresenterToRouterInterface
+}
+
