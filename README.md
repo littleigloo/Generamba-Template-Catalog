@@ -1,3 +1,7 @@
+<p align="center">
+<img src="Images/cover.png" width="200"/>
+</p>
+
 # Generamba-Template-Catalog
 
 ### Overview
